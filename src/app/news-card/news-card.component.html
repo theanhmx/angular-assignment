@@ -1,8 +1,8 @@
-<mat-card class="news-card">
-	<mat-card-title>{{source}}</mat-card-title>
+<mat-card class="news-card" (click)="viewNews()">
+	<mat-card-title class="news-title">{{source}}</mat-card-title>
 	<img mat-card-image class="news-image default" *ngIf="multimedia.length === 0">
 	<img mat-card-image class="news-image custom" *ngIf="multimedia.length > 0"
 	[ngStyle]="{ 'background-image': 'url(https://www.nytimes.com/' + multimedia[0].url + ')'}">
 	<mat-card-content>{{snippet}}</mat-card-content>
-	<mat-card-footer>{{pub_date}}</mat-card-footer>
+	<mat-card-footer class="news-pub_date">{{pub_date | date:'fullDate'}}</mat-card-footer>
 </mat-card>

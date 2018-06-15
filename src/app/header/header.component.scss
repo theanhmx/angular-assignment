@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  background: #ccd0d2;
+  z-index: 9999;
+}
+
+.header-image {
+  background-image: url('../../assets/images/nyt-logo.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 5rem;
+  width: 20rem;
+  margin: auto;
+}

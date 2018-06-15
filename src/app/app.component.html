@@ -1,13 +1,14 @@
  <div>
   <app-header></app-header>
+  <div class="header-placeholder"></div>
   <div class="news-container">
-    <app-news-card *ngFor="let news of newsArray" 
+    <app-news-card *ngFor="let news of newsArray"
       [snippet]="news.snippet"
       [pub_date]="news.pub_date"
       [source]="news.source"
       [multimedia]="news.multimedia"></app-news-card>
   </div>
-  <mat-paginator #pagination 
+  <mat-paginator #pagination
   	[length]="length"
     [pageSize]="pageSize"
     (page)="pageEvent = getNews($event)"

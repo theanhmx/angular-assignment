@@ -1,0 +1,8 @@
+<mat-card class="news-card">
+  <mat-card-title class="news-title">{{data.source}}</mat-card-title>
+  <img mat-card-image class="news-image default" *ngIf="data.multimedia.length === 0">
+  <img mat-card-image class="news-image custom" *ngIf="data.multimedia.length > 0"
+  [ngStyle]="{ 'background-image': 'url(https://www.nytimes.com/' + data.multimedia[0].url + ')'}">
+  <mat-card-content>{{data.snippet}}</mat-card-content>
+  <mat-card-footer class="news-pub_date">{{data.pub_date | date:'fullDate'}}</mat-card-footer>
+</mat-card>

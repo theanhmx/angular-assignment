@@ -11,10 +11,13 @@ export class NewsService {
   url = 'https://api.nytimes.com';
   apiKey = '2938c67dd3604509bb7ecac1851766f9';
 
-  getNews() {
+  getNews(query, page) {
     let params = new HttpParams({
       fromObject: {
-        'api-key': this.apiKey
+        'api-key': this.apiKey,
+        'q': query,
+        'page': page,
+        'sort': 'newest'
       }
     });
 

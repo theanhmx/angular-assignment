@@ -1,9 +1,8 @@
-<mat-card>
-	<mat-card-title>this is the card title</mat-card-title>
-	<mat-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</mat-card-content>
+<mat-card class="news-card">
+	<mat-card-title>{{source}}</mat-card-title>
+	<img mat-card-image class="news-image default" *ngIf="multimedia.length === 0">
+	<img mat-card-image class="news-image custom" *ngIf="multimedia.length > 0"
+	[ngStyle]="{ 'background-image': 'url(https://www.nytimes.com/' + multimedia[0].url + ')'}">
+	<mat-card-content>{{snippet}}</mat-card-content>
+	<mat-card-footer>{{pub_date}}</mat-card-footer>
 </mat-card>

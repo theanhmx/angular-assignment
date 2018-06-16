@@ -1,16 +1,17 @@
  <div>
   <app-header></app-header>
   <div class="header-placeholder"></div>
+  <!-- <div>{{pageNumber$ | async}} {{query$ | async}} {{length$ | async}}<button mat-button (click)="increment()">Click me!</button></div> -->
   <div class="news-container">
-    <app-news-card *ngFor="let news of newsArray"
+    <app-news-card *ngFor="let news of newsArray$ | async"
       [snippet]="news.snippet"
       [pub_date]="news.pub_date"
       [source]="news.source"
       [multimedia]="news.multimedia"></app-news-card>
   </div>
   <mat-paginator #pagination
-  	[length]="length"
-    [pageSize]="pageSize"
+  	[length]="length$ | async"
+    [pageSize]="pageSize$ | async"
     (page)="pageEvent = getNews($event)"
     [hidePageSize]="true"></mat-paginator>
 </div>

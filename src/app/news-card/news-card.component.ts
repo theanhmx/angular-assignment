@@ -20,7 +20,7 @@ export class NewsCardComponent implements OnInit {
 
   viewNews(): void {
     let dialogRef = this.dialog.open(NewsModalComponent, {
-      width: '250px',
+      width: '20rem',
       data: {snippet: this.snippet, pub_date: this.pub_date, source: this.source, multimedia: this.multimedia}
     });
 

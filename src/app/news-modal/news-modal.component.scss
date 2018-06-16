@@ -12,6 +12,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 13rem;
+  width: 100%;
 }
 
 .default {
@@ -19,9 +20,6 @@
 }
 
 .news-pub_date {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
   margin: 0;
   font-style: italic;
   font-size: 0.8rem;

@@ -30,7 +30,7 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.header-image').textContent).toBeDefined();
+    expect(compiled.querySelector('.header-image')).toBeTruthy();
   }));
 });
 

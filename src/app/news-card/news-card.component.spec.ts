@@ -52,5 +52,13 @@ describe('NewsCardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render the card correctly', async(() => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.news-title').textContent).toEqual('The New York Times');
+    expect(compiled.querySelector('.news-image')).toBeTruthy();
+    expect(compiled.querySelector('mat-card-content').textContent).toEqual('Lorem ipsum dolor sit amet');
+    expect(compiled.querySelector('.news-pub_date').textContent).toEqual('Wednesday, March 28, 2018');
+  }));
 });
 

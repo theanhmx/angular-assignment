@@ -21,11 +21,11 @@ export function rootReducer(lastState: IAppState, action: Action): IAppState {
   switch(action.type) {
     case CounterActions.STORE_NEWS:
       return {
-        pageNumber: action.payload.page,
-        query: action.payload.query,
+        pageNumber: action['payload'].page,
+        query: action['payload'].query,
         length: lastState.length,
         pageSize: lastState.pageSize,
-        newsArray: action.payload.newsArray
+        newsArray: action['payload'].newsArray
       };
   }
 

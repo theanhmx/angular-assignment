@@ -1,7 +1,6 @@
  <div>
   <app-header></app-header>
   <div class="header-placeholder"></div>
-  <!-- <div>{{pageNumber$ | async}} {{query$ | async}} {{length$ | async}}<button mat-button (click)="increment()">Click me!</button></div> -->
   <div class="news-container">
     <app-news-card *ngFor="let news of newsArray$ | async"
       [snippet]="news.snippet"

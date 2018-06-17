@@ -16,7 +16,7 @@ export class CounterActions {
         payload: {
           query: query,
           page: page,
-          newsArray: response.response.docs
+          newsArray: response['response'].docs
         }
       })
     });
